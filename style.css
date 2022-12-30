@@ -1,0 +1,132 @@
+:root {
+    --azul: rgb(46, 175, 235);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    animation-name: animacao;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    
+}
+
+.formulario {
+    width: 300px;
+    margin: 30px auto;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.formulario-titulo {
+    background-color: var(--azul);
+    width: 100%;
+    height: 50px;
+    margin-top: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    border-start-start-radius: 10px;
+    font-size: 30px;
+}
+
+.formulario-paragrafo {
+
+}
+
+.formulario-paragrafo-label {
+    font-size: 25px;
+}
+
+.formulario-paragrafo-input {
+    padding: 10px;
+    border: none;
+    border-radius: 7px;
+    width: 250px;
+    background-color: #eee;
+    outline: 0;
+    font-size: 17px;
+    
+}
+.formulario-paragrafo-input::placeholder {
+    color: #aaa;
+}
+.formulario-botao {
+    width: 60%;
+    padding: 5px;
+    border-radius: 7px;
+    font-size: 20px;
+    background: var(--azul);
+    color:rgb(245, 242, 242);
+    margin-bottom: 10px;
+    border: none;
+    box-shadow: 0px 1px 1px #000;
+}
+
+.formulario-botao:hover {
+    /* animation-name: animacaoBtn;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    color: rgb(152, 226, 102); */
+}
+
+@keyframes animacao {
+    to {background: linear-gradient(to right, #e99df3, #e2d3e4);}
+    from {background: linear-gradient(to right, #e2d3e4, #e99df3);}
+}
+
+@keyframes animacaoBtn {
+    0% {background-color: var(--azul);}
+    50% {
+        background-color: rgb(152, 226, 102); 
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+    }
+    100% {
+        display: none;
+        visibility: hidden;
+        
+    }
+}
+
+.msg {
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    
+
+}
+.texto {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.ass {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* float: right; */
+    /* right: 5px; */
+}
+
+.share {
+    width: 200px;
+    padding: 5px;
+    border-radius: 7px;
+    font-size: 20px;
+    background: var(--azul);
+    color:rgb(245, 242, 242);
+    margin: 10px 10px;
+    float: right;
+    border: none;
+    box-shadow: 0px 1px 1px #000;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+}

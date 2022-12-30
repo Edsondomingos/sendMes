@@ -5,15 +5,41 @@ const nome = document.querySelector('[data-type-nome]')
 
 form.addEventListener('submit', e => {
     e.preventDefault()
-    form.style.display = 'none'
+    // form.style.display = 'none'
+    let novaData = ''
+    let novaMensagem = ''
+    let novoNome = ''
+    for(let i=0;i<data.value.length;i++){
+        if(data.value[i] == ' '){
+            novaData += '%'
+        } else {
+            novaData += data.value[i]
+        }
+    }
+    for(let i=0;i<mensagem.value.length;i++){
+        if(mensagem.value[i] == ' '){
+            novaMensagem += '%'
+        } else {
+            novaMensagem += mensagem.value[i]
+        }
+    }
+    for(let i=0;i<nome.value.length;i++){
+        if(nome.value[i] == ' '){
+            novoNome += '%'
+        } else {
+            novoNome += nome.value[i]
+        }
+    }
+    
     let info = {
-        data: data.value,
-        mensagem: mensagem.value,
-        nome: nome.value
+        data: novaData,
+        mensagem: novaMensagem,
+        nome: novoNome
     }
     
     localStorage.setItem('dados',JSON.stringify(info))
-    window.location.href = 'mes.html?' + data.value + '?' + mensagem.value + '?' + nome.value
+    
+    window.location.href = 'mes.html?' + novaData + '?' + novaMensagem + '?' + novoNome
     // window.location.href = 'mes.html'
     // console.log(mensagem.value)
     // let msg = document.createElement('main')

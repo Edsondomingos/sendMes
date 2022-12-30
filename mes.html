@@ -5,22 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mensagem</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main data-type-principal=""></main>
+    <main data-type-principal="">
+        
+    </main>
 
     <script>
         const mensagem = document.querySelector('[data-type-principal')
         let dadosStorage = localStorage.getItem('dados')
-        console.log(JSON.parse(dadosStorage))
         let dados = JSON.parse(dadosStorage)
+        
+        const url = window.location.href
+        let urlTratada = ''
+        for (let i=0;i<url.length;i++){
+            if (url[i] == '%'){
+                urlTratada += ' '
+            } else {
+                urlTratada += url[i]
+            }
+        }
+        
+        const link = urlTratada.slice(urlTratada.indexOf('?')+1,urlTratada.length)
+        const comemoracao = link.slice(0,link.indexOf('?'))
+        const data = link.slice(link.indexOf('?')+1,link.length)
+        const texto = data.slice(0,data.indexOf('?'))
+        const msg = data.slice(data.indexOf('?')+1,data.length)
+        const nome = msg.slice(0,msg.length)
+
+        // console.log(comemoracao)
+        // console.log(texto)
+        // console.log(nome)
         let conteudo = `
-            <h1>${dados.data}</h1>
-            <p>${dados.mensagem}</p>
-            <p>${dados.nome}</p>
+            <h1 class="formulario-titulo">${comemoracao}</h1>
+            <section class="msg">
+                <p class="texto">${texto}</p>
+                <p class="ass">Ass: ${nome}</p>
+            </section>
+            <button class="share">Compartilhar</button>
         `
         mensagem.innerHTML = conteudo
         document.body.appendChild(mensagem)
+        const footer = document.createElement('footer')
+        footer.innerHTML = `
+        <p>Desenvolvido por 
+            <a href="https://linkedin.com/in/edson-domingos" target="_blank">
+                Edson Domingos
+            </a>
+        </p>
+        `
+        document.body.appendChild(footer)
     </script>
 </body>
 </html>

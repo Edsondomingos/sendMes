@@ -1,6 +1,6 @@
 from django.urls import path
 # from recipes.views import home, sobre, contato
-from . import views
+from . import views # . - relaciona o diretorio atual
 
 # HTTP Request
 urlpatterns = [

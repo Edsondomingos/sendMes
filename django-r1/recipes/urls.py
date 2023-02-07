@@ -6,4 +6,5 @@ from . import views # . - relaciona o diretorio atual
 urlpatterns = [
     path('', views.home),
     path('recipes/<int:id>/', views.recipe),
+    path('contact/<int:id>/', views.contact),
 ]

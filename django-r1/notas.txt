@@ -1,0 +1,5 @@
+o static que funciona é dentro de recipes(dentro da aplicação)
+
+criar o requirements(arquivo que indica o que precisa instalar para rodar)
+
+ajustar layout do itens

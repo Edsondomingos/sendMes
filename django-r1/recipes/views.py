@@ -13,3 +13,8 @@ def recipe(request, id):
     return render(request, 'recipes/pages/recipe-view.html', context={
         'recipes': make_recipe(),
     })
+
+def contact(request, id):
+    return render(request, 'recipes/pages/contact-view.html', context={
+        'recipes': make_recipe(),
+    })

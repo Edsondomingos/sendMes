@@ -40,8 +40,8 @@
         let conteudo = `
             <h1 class="formulario-titulo">${comemoracao}</h1>
             <section class="msg">
-                <p class="texto">${texto}</p>
-                <p class="ass">Ass: ${nome}</p>
+                <article class="texto">${texto}</article>
+                <p class="assinatura">Ass: ${nome}</p>
             </section>
             <button class="share" data-type-share>Compartilhar</button>
         `
@@ -67,6 +67,7 @@
                 await navigator.share(comp)
             } catch(err){
                 share.style.background = 'red'
+                await navigator.clipboard.writeText(comp)
             }
             
         })

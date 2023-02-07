@@ -1,30 +1,32 @@
+{% load static %}
 <div class="recipe recipe-list-item">
     <div class="recipe-cover">
-      <img src="https://via.placeholder.com/1280x720/269fe6" alt="" />
+      <!-- <img src="https://via.placeholder.com/1280x720/269fe6" alt="" /> -->
+      <img src="{% static 'recipes/imgs/burguer1.png' %}" alt="" />
     </div>
     <div class="recipe-title-container">
-      <h2 class="recipe-title">{{ recipe.title }}</h2>
+      <h2 class="recipe-title">{{ recipes.title }}</h2>
     </div>
   
     <div class="recipe-author">
       <span class="recipe-author-item">
         <i class="fas fa-user"></i>
-        {{ recipe.author.first_name }} {{ recipe.author.last_name }}
+        {{ recipes.author.first_name }} {{ recipes.author.last_name }}
       </span>
       <span class="recipe-author-item">
         <i class="fas fa-calendar-alt"></i>
-        {{ recipe.created_at|date:"d/M/Y" }} às {{recipe.created_at|date:"H:i"}}
+        {{ recipes.created_at|date:"d/M/Y" }} às {{recipes.created_at|date:"H:i"}}
       </span>
       <span class="recipe-author-item">
         <a href="/recipes/category/cafe-da-manha/">
           <i class="fas fa-layer-group"></i>
-          <span>{{ recipe.category.name }}</span>
-          <!-- <span>{{ recipe.category.name }}</span> -->
+          <span>{{ recipes.category.name }}</span>
+          <!-- <span>{{ recipes.category.name }}</span> -->
         </a>
       </span>
     </div>
     <div class="recipe-content">
-      <p>{{recipe.description}}</p>
+      <p>{{recipes.description}}</p>
       <!-- <p>cafe da manha</p> -->
     </div>
   
@@ -35,7 +37,7 @@
           Preparo
         </h3>
         <div class="recipe-meta-text">
-          {{recipe.preparation_time}} {{recipe.preparation_time_unit}}</div>
+          {{recipes.preparation_time}} {{recipes.preparation_time_unit}}</div>
           <!-- 10 minutos  -->
       </div>
       <div class="recipe-meta recipe-servings">
@@ -44,7 +46,7 @@
           Porções
         </h3>
         <div class="recipe-meta-text"> 
-          {{ recipe.servings }} {{recipe.servings_unit}}</div>
+          {{ recipes.servings }} {{recipes.servings_unit}}</div>
       </div>
     </div>
   
@@ -52,6 +54,9 @@
       <a class="recipe-read-more button button-dark button-full-width" href="/recipes/3/">
         <i class="fas fa-eye"></i>
         <span>ver mais...</span>
+      </a>
+      <a class="button  button-full-width" id="button-light" href="/recipes/3/">
+        <span class="">Contatos</span>
       </a>
     </footer>
   </div>

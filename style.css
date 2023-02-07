@@ -100,16 +100,21 @@ body {
     padding: 10px;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;    
+    flex-wrap: wrap; 
+    
+    
 
 }
 .texto {
-    
     background-color: yellow;
-    width: 200px;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    /* width: 90%;
+    height: 100px; */
+    text-justify: distribute;
 }
 
-.ass {
+.assinatura {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     /* float: right; */
     /* right: 5px; */

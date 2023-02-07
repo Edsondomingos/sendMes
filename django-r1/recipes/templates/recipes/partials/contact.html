@@ -1,0 +1,44 @@
+{% load static %}
+<div class="recipe recipe-list-item">
+    <div class="recipe-cover">
+    <img src="https://api.lorem.space/image/face?w=1280&amp;amp;amp;amp;h=720" alt="" /> 
+    </div>
+    <div class="recipe-title-container">
+      <h2 class="recipe-title">{{ recipes.author.first_name }} {{ recipes.author.last_name }}</h2>
+    </div>
+  
+    <div class="recipe-author">
+      <span class="recipe-author-item">
+        <i class="fa-solid fa-phone"></i>
+        {{ recipes.telefone }} <i class="fa-brands fa-whatsapp"></i> {{recipes.telefone}}
+      </span>
+      <span class="recipe-author-item">
+        <a href="">
+            <i class="fa-solid fa-envelope"></i>
+          <span>{{ recipes.email }}</span>
+          <!-- <span>{{ recipes.category.name }}</span> -->
+        </a>
+      </span>
+    </div>
+    <div class="recipe-content">
+      <p>{{recipes.description}}</p>
+      <!-- <p>cafe da manha</p> -->
+    </div>
+  
+  
+    <footer class="recipe-footer">
+      <a class="button  button-full-width" id="button-light" href="/">
+        <span class="">Voltar</span>
+      </a>
+    </footer>
+  </div>
+  
+<!--
+<p>Contato whatsapp</p>
+<p>Formação academica(Algum curso de gastronomia ou se cozinhar é apenas
+um hobby)
+</p>
+<p>Especialidades (Qual o tipo de gastronomia que o autor é especialista, tipo:
+    massas, comida japonesa, etc.)
+</p>
+<p>Redes sociais</p> -->

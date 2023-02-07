@@ -51,3 +51,8 @@ form.addEventListener('submit', e => {
     // msg.innerHTML = conteudo
     // document.body.appendChild(msg)
 })
+
+const contagem = document.querySelector('span')
+mensagem.addEventListener('keyup', e => {
+    contagem.textContent = `${mensagem.value.length}/200`
+})

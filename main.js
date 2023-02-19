@@ -40,16 +40,6 @@ form.addEventListener('submit', e => {
     localStorage.setItem('dados',JSON.stringify(info))
     
     window.location.href = 'mes.html?' + novaData + '?' + novaMensagem + '?' + novoNome
-    // window.location.href = 'mes.html'
-    // console.log(mensagem.value)
-    // let msg = document.createElement('main')
-    // let conteudo = `
-    //     <h1>${data.value}</h1>
-    //     <p>${mensagem.value}</p>
-    //     <p>${nome.value}</p>
-    // `
-    // msg.innerHTML = conteudo
-    // document.body.appendChild(msg)
 })
 
 const contagem = document.querySelector('span')

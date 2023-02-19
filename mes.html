@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main data-type-principal="">
+    <main data-type-principal>
         
     </main>
 
     <script>
-        const mensagem = document.querySelector('[data-type-principal')
+        const mensagem = document.querySelector('[data-type-principal]')
         let dadosStorage = localStorage.getItem('dados')
         let dados = JSON.parse(dadosStorage)
         
@@ -58,8 +58,8 @@
         document.body.appendChild(footer)
         let share = document.querySelector('[data-type-share]')
         const comp = {
-            title: 'Feliz',
-            text: 'Feliz ano novo',
+            title: comemoracao,
+            text: texto,
             url: window.location.href
         }
         share.addEventListener('click', async () => {
@@ -68,6 +68,10 @@
             } catch(err){
                 share.style.background = 'red'
                 await navigator.clipboard.writeText(comp)
+                // let t = document.createElement('p')
+                // t.text = err
+                conteudo.innerHTML = err
+                // document.body.appendChild(t)
             }
             
         })

@@ -106,9 +106,9 @@ body {
 
 }
 .texto {
-    background-color: yellow;
+    /* background-color: yellow; */
     box-sizing: border-box;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     /* width: 90%;
     height: 100px; */
     text-justify: distribute;

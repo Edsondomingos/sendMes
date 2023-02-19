@@ -21,5 +21,5 @@ Página inicial onde há tem entrada de dados:
 ### main.js
 contem todo o código javascript e  processamento das informações;
 
-# Utlização
+# Utilização
 Para utilizar é necessário apenas um navegador.

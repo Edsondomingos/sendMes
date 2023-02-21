@@ -4,14 +4,24 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    animation-name: animacao;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
+    animation: gradient2 7s ease alternate infinite;
+    background: linear-gradient(-45deg,#ee7752, #e73c7e, #23a6d5, #23d5ab) no-repeat;
+    background-size: 300% 300%;
     
 }
 
+@keyframes gradient2 {
+    from {
+        background-position: 0 50%;
+    }
+    to {
+        background-position: 100% 50%;
+    }
+}
+
 .formulario {
-    width: 300px;
+    /* width: 300px; */
+    max-width: 400px;
     margin: 30px auto;
     background: #fff;
     display: flex;
@@ -19,6 +29,8 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    height: 600px;
+    
 }
 
 .formulario-titulo {
@@ -67,15 +79,10 @@ body {
 }
 
 .formulario-botao:hover {
-    /* animation-name: animacaoBtn;
+    animation-name: animacaoBtn;
     animation-duration: 1s;
-    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    /*animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
     color: rgb(152, 226, 102); */
-}
-
-@keyframes animacao {
-    to {background: linear-gradient(to right, #e99df3, #e2d3e4);}
-    from {background: linear-gradient(to right, #e2d3e4, #e99df3);}
 }
 
 @keyframes animacaoBtn {
